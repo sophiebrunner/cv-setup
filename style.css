@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  text-align: center;
+  background-color: mediumseagreen;
+  padding: 50px 25px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Sedgwick Ave", cursive;
+}
