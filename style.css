@@ -3,14 +3,26 @@
   font-family: "Roboto", sans-serif;
 }
 
-.main {
+body {
+  margin: 0;
+}
+
+main {
   max-width: 800px;
   margin: 0 auto;
   padding: 16px;
 }
 
-body {
-  margin: 0;
+article {
+  margin: 100px;
+}
+
+article + article {
+  border-top: 2px solid lightgray;
+}
+
+section {
+  margin: 50px;
 }
 
 .header {
@@ -26,4 +38,17 @@ h4,
 h5,
 h6 {
   font-family: "Sedgwick Ave", cursive;
+}
+
+nav a {
+  margin: 12px;
+  color: whitesmoke;
+}
+
+nav a:hover {
+  color: darkgreen;
+}
+
+nav a:active {
+  background-color: darkgreen;
 }
