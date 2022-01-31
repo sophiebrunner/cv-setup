@@ -1,5 +1,8 @@
 * {
   box-sizing: border-box;
+}
+
+html {
   font-family: "Roboto", sans-serif;
 }
 
@@ -14,7 +17,7 @@ main {
 }
 
 article {
-  margin: 100px;
+  margin-top: 60px;
 }
 
 article + article {
@@ -22,13 +25,7 @@ article + article {
 }
 
 section {
-  margin: 50px;
-}
-
-.header {
-  text-align: center;
-  background-color: mediumseagreen;
-  padding: 50px 25px;
+  margin: 40px;
 }
 
 h1,
@@ -40,15 +37,54 @@ h6 {
   font-family: "Sedgwick Ave", cursive;
 }
 
-nav a {
+.header {
+  text-align: center;
+  background-color: mediumseagreen;
+  padding: 50px 25px;
+}
+
+.nav {
   margin: 12px;
   color: whitesmoke;
 }
 
-nav a:hover {
+.nav:hover {
+  color: palevioletred;
+}
+
+.nav:active {
+  background-color: hotpink;
+}
+
+::selection {
+  background-color: black;
+  color: white;
+}
+
+.profession::after {
+  content: " 👩🏻";
+}
+
+.call-name::after {
+  content: " 🙋🏻‍♀️";
+}
+
+ol li,
+.contact,
+.call-name {
+  text-decoration: none;
+  font-style: normal;
+}
+
+.contact {
+  text-decoration: underline;
   color: darkgreen;
 }
 
-nav a:active {
-  background-color: darkgreen;
+.contact:hover {
+  color: palevioletred;
+}
+
+.contact:active {
+  color: hotpink;
 }

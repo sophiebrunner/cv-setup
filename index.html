@@ -7,6 +7,10 @@
     <meta name="description" content="My CV" />
     <meta name="author" content="Sophie Brunner" />
     <title>The CV of Sophie Brunner</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/normalize.css@8.0.1/normalize.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,20 +22,20 @@
   <body>
     <header class="header">
       <h1>Sophie Brunner</h1>
-      <p>
+      <p class="profession">
         <strong>Project/content manager</strong> &
-        <strong>soon-to-be web developer</strong> <br />
+        <strong>soon-to-be web developer</strong>
       </p>
       <nav>
-        <a href="#profile">Profile</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a href="#profile" class="nav">Profile</a>
+        <a href="#experience" class="nav">Experience</a>
+        <a href="#skills" class="nav">Skills</a>
+        <a href="#contact" class="nav">Contact</a>
       </nav>
     </header>
     <main>
       <article id="profile">
-        <h2>Profile</h2>
+        <h2 class="profile-header">Profile</h2>
         <blockquote
           cite="https://www.goodreads.com/quotes/804945-nothing-is-absolute-everything-changes-everything-moves-everything-revolves-everything"
         >
@@ -108,18 +112,17 @@
         <address>
           <ol>
             <li>
-              <a href="mailto:sophie.brunner.91@gmail.com"
+              <a href="mailto:sophie.brunner.91@gmail.com" class="contact"
                 >Nice to e-meet you!</a
               >
             </li>
             <li>
               GitHub:
-              <a href="https://github.com/sophiebrunner">sophiebrunner</a>
+              <a href="https://github.com/sophiebrunner" class="contact"
+                >sophiebrunner</a
+              >
             </li>
-            <li>
-              Insta:
-              <a href="https://www.instagram.com/fraubrummer/">@fraubrummer</a>
-            </li>
+            <li class="call-name">Call me by my name</li>
           </ol>
         </address>
       </article>
