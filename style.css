@@ -18,6 +18,8 @@ main {
 
 article {
   margin-top: 60px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 article + article {
@@ -37,10 +39,16 @@ h6 {
   font-family: "Sedgwick Ave", cursive;
 }
 
+h2 {
+  position: relative;
+  left: -24px;
+}
+
 .header {
   text-align: center;
   background-color: mediumseagreen;
   padding: 50px 25px;
+  position: relative;
 }
 
 .nav {
@@ -62,7 +70,7 @@ h6 {
 }
 
 .profession::after {
-  content: " 👩🏻";
+  content: " 👩🏻‍💻";
 }
 
 .call-name::after {
@@ -87,4 +95,20 @@ ol li,
 
 .contact:active {
   color: hotpink;
+}
+
+.experience {
+  display: inline-block;
+}
+
+aside {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-style: inherit;
+  font-size: 20px;
+  background-color: midnightblue;
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
 }
