@@ -4,6 +4,7 @@
 
 html {
   font-family: "Roboto", sans-serif;
+  font-size: 16px;
 }
 
 body {
@@ -11,23 +12,54 @@ body {
 }
 
 main {
-  max-width: 800px;
+  max-width: 65ch;
   margin: 0 auto;
-  padding: 16px;
+  padding: 0.3rem;
+}
+
+.page-header {
+  text-align: center;
+  background-color: mediumseagreen;
+  padding: 4em 2em;
+  position: relative;
+}
+
+.page-title {
+  font-size: 3.5rem;
+}
+
+h1 {
+  font-size: 1em;
+}
+
+.profession {
+  font-size: 0.25em;
+}
+
+.hire-badge {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  font-style: inherit;
+  font-size: inherit;
+  background-color: midnightblue;
+  padding: 1em;
+  border-radius: 0.5em;
+  color: white;
 }
 
 article {
-  margin-top: 60px;
+  margin-top: 5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
 
 article + article {
-  border-top: 2px solid lightgray;
+  border-top: 0.2em solid lightgray;
 }
 
 section {
-  margin: 40px;
+  margin: 0.5rem;
 }
 
 h1,
@@ -41,19 +73,23 @@ h6 {
 
 h2 {
   position: relative;
-  left: -24px;
+  left: -1rem;
+  font-size: 1.5rem;
 }
 
-.header {
-  text-align: center;
-  background-color: mediumseagreen;
-  padding: 50px 25px;
-  position: relative;
+h3 {
+  font-size: 1rem;
+}
+
+i,
+em {
+  font-style: unset;
 }
 
 .nav {
-  margin: 12px;
+  margin: 1.2em;
   color: whitesmoke;
+  font-size: 1em;
 }
 
 .nav:hover {
@@ -99,16 +135,4 @@ ol li,
 
 .experience {
   display: inline-block;
-}
-
-aside {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  font-style: inherit;
-  font-size: 20px;
-  background-color: midnightblue;
-  padding: 12px;
-  border-radius: 10px;
-  color: white;
 }
