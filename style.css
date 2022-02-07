@@ -22,6 +22,7 @@ main {
   background-color: mediumseagreen;
   padding: 4em 2em;
   position: relative;
+  margin-bottom: 5rem;
 }
 
 .page-title {
@@ -48,14 +49,11 @@ h1 {
   color: white;
 }
 
-article {
+article + article {
+  border-top: 0.2em solid lightgray;
   margin-top: 5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-}
-
-article + article {
-  border-top: 0.2em solid lightgray;
 }
 
 section {
@@ -135,4 +133,40 @@ ol li,
 
 .experience {
   display: inline-block;
+}
+
+@media screen and (min-width: 786px) {
+  html {
+    font-size: 18px;
+  }
+
+  article + article {
+    margin-top: 10rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
+
+  .hire-badge {
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+
+  article + article {
+    margin-top: 15rem;
+  }
+}
+
+@media print {
+  .nav {
+    display: none;
+  }
+
+  .hire-badge {
+    display: none;
+  }
 }
