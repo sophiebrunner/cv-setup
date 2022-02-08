@@ -17,6 +17,35 @@ main {
   padding: 0.3rem;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Sedgwick Ave", cursive;
+}
+
+h1 {
+  font-size: 1em;
+}
+
+h2 {
+  position: relative;
+  left: -1rem;
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+i,
+em {
+  font-style: unset;
+  font-family: monospace;
+}
+
 .page-header {
   text-align: center;
   background-color: mediumseagreen;
@@ -29,8 +58,34 @@ main {
   font-size: 3.5rem;
 }
 
-h1 {
+.flex-container-nav {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  margin: 1.2em;
+  color: whitesmoke;
   font-size: 1em;
+}
+
+.nav:hover {
+  color: palevioletred;
+}
+
+.nav:active {
+  background-color: hotpink;
+}
+
+.flex-container-experience {
+  display: flex;
+  width: inherit;
+  flex-direction: column;
+}
+
+.profession::after {
+  content: " 👩🏻‍💻";
 }
 
 .profession {
@@ -60,53 +115,6 @@ section {
   margin: 0.5rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Sedgwick Ave", cursive;
-}
-
-h2 {
-  position: relative;
-  left: -1rem;
-  font-size: 1.5rem;
-}
-
-h3 {
-  font-size: 1rem;
-}
-
-i,
-em {
-  font-style: unset;
-}
-
-.nav {
-  margin: 1.2em;
-  color: whitesmoke;
-  font-size: 1em;
-}
-
-.nav:hover {
-  color: palevioletred;
-}
-
-.nav:active {
-  background-color: hotpink;
-}
-
-::selection {
-  background-color: black;
-  color: white;
-}
-
-.profession::after {
-  content: " 👩🏻‍💻";
-}
-
 .call-name::after {
   content: " 🙋🏻‍♀️";
 }
@@ -131,10 +139,6 @@ ol li,
   color: hotpink;
 }
 
-.experience {
-  display: inline-block;
-}
-
 @media screen and (min-width: 786px) {
   html {
     font-size: 18px;
@@ -143,6 +147,21 @@ ol li,
   article + article {
     margin-top: 10rem;
   }
+
+  .flex-container-nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .flex-container-experience {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+::selection {
+  background-color: black;
+  color: white;
 }
 
 @media screen and (min-width: 992px) {
