@@ -43,7 +43,18 @@ h3 {
 i,
 em {
   font-style: unset;
-  font-family: monospace;
+  color: darkgreen;
+}
+
+article + article {
+  border-top: 0.2em solid lightgray;
+  margin-top: 5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+section {
+  margin: 0.5rem;
 }
 
 .page-header {
@@ -59,13 +70,13 @@ em {
 }
 
 .flex-container-nav {
-  width: inherit;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  height: 8em;
 }
 
 .nav {
-  margin: 1.2em;
   color: whitesmoke;
   font-size: 1em;
 }
@@ -80,7 +91,6 @@ em {
 
 .flex-container-experience {
   display: flex;
-  width: inherit;
   flex-direction: column;
 }
 
@@ -102,17 +112,6 @@ em {
   padding: 1em;
   border-radius: 0.5em;
   color: white;
-}
-
-article + article {
-  border-top: 0.2em solid lightgray;
-  margin-top: 5rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-section {
-  margin: 0.5rem;
 }
 
 .call-name::after {
@@ -149,13 +148,21 @@ ol li,
   }
 
   .flex-container-nav {
+    height: unset;
+    margin-left: 9em;
+    margin-right: 9em;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
   }
 
   .flex-container-experience {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .article-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -176,7 +183,7 @@ ol li,
   }
 
   article + article {
-    margin-top: 15rem;
+    margin-top: 5em;
   }
 }
 
