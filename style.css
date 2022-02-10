@@ -2,9 +2,18 @@
   box-sizing: border-box;
 }
 
-html {
+:root {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  --background-color-hero: mediumseagreen;
+  --background-color-interaction: midnightblue;
+  --background-color-dark: black;
+  --color-light: whitesmoke;
+  --color-form: lightgray;
+  --color-highlight: darkgreen;
+  --color-interaction: #2980b9;
+  --page-background-color: white;
+  --page-text-color: black;
 }
 
 body {
@@ -15,6 +24,8 @@ main {
   max-width: 65ch;
   margin: 0 auto;
   padding: 0.3rem;
+  background-color: var(--page-background-color);
+  color: var(--page-text-color);
 }
 
 h1,
@@ -43,11 +54,11 @@ h3 {
 i,
 em {
   font-style: unset;
-  color: darkgreen;
+  color: var(--color-highlight);
 }
 
 article + article {
-  border-top: 0.2em solid lightgray;
+  border-top: 0.2em solid var(--color-form);
   margin-top: 5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -59,7 +70,7 @@ section {
 
 .page-header {
   text-align: center;
-  background-color: mediumseagreen;
+  background-color: var(--background-color-hero);
   padding: 4em 2em;
   position: relative;
   margin-bottom: 5rem;
@@ -77,16 +88,16 @@ section {
 }
 
 .nav {
-  color: whitesmoke;
+  color: var(--color-light);
   font-size: 1em;
 }
 
 .nav:hover {
-  color: palevioletred;
+  color: var(--color-interaction);
 }
 
 .nav:active {
-  background-color: hotpink;
+  background-color: var(--background-color-interaction);
 }
 
 .flex-container-experience {
@@ -108,7 +119,7 @@ section {
   right: 1em;
   font-style: inherit;
   font-size: inherit;
-  background-color: midnightblue;
+  background-color: var(--background-color-interaction);
   padding: 1em;
   border-radius: 0.5em;
   color: white;
@@ -127,15 +138,15 @@ ol li,
 
 .contact {
   text-decoration: underline;
-  color: darkgreen;
+  color: var(--color-highlight);
 }
 
 .contact:hover {
-  color: palevioletred;
+  color: var(--color-interaction);
 }
 
 .contact:active {
-  color: hotpink;
+  background-color: var(--background-color-interaction);
 }
 
 @media screen and (min-width: 786px) {
@@ -167,8 +178,8 @@ ol li,
 }
 
 ::selection {
-  background-color: black;
-  color: white;
+  background-color: var(--background-color-dark);
+  color: var(--color-light);
 }
 
 @media screen and (min-width: 992px) {
@@ -194,5 +205,13 @@ ol li,
 
   .hire-badge {
     display: none;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  main,
+  body {
+    background-color: var(--background-color-dark);
+    color: var(--color-light);
   }
 }
