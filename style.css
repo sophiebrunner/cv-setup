@@ -1,14 +1,18 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 :root {
-  --background-color-element: mediumseagreen;
-  --background-color-interaction: midnightblue;
+  --background-color-element: #81b29a;
+  --background-color-interaction: #3d405b;
+  --background-color-active: #f2cc8f;
   --color-highlight: darkgreen;
   --color-interaction: #2980b9;
+  --color-focus: #e07a5f;
   --page-background-color: black;
-  --page-text-color: whitesmoke;
+  --page-text-color: #f4f1de;
 }
 
 html {
@@ -92,18 +96,28 @@ section {
 .flex-container-nav {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .nav {
   color: var(--page-text-color);
   font-size: 1em;
+  padding: 0.25rem;
+  transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
+}
+
+.nav:focus {
+  color: var(--color-focus);
+  background-color: var(--background-color-active);
 }
 
 .nav:hover {
   color: var(--color-interaction);
+  background-color: var(--page-text-color);
 }
 
 .nav:active {
+  color: var(--page-text-color);
   background-color: var(--background-color-interaction);
 }
 
@@ -168,13 +182,22 @@ ol li,
   color: var(--page-text-color);
 }
 
+::selection {
+  background-color: var(--page-background-color);
+  color: var(--page-text-color);
+}
+
 @media screen and (min-width: 786px) {
   html {
     font-size: 18px;
   }
 
+  .article:first-of-type {
+    margin-top: 1rem;
+  }
+
   article + article {
-    margin-top: 10rem;
+    margin-top: 5rem;
   }
 
   .flex-container-nav {
@@ -192,11 +215,6 @@ ol li,
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-}
-
-::selection {
-  background-color: var(--page-background-color);
-  color: var(--page-text-color);
 }
 
 @media screen and (min-width: 992px) {
